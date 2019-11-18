@@ -12,10 +12,6 @@ class DetailsPage extends Component {
     character: null
   }
 
-  // componentDidMount() {
-  //   this.fetchCharacter(this.props.location.state.id)
-  // }
-
   render() {
     return (
       <Layout>
@@ -54,7 +50,7 @@ class DetailsPage extends Component {
             <p>In fact, the "right" way to do this in GatsbyJS is to create every possible page permutation ahead of time.</p>
             <p>Or...fetch the data from a Client-side API call, which will not take advantage of pre-building or SSR.</p>
             <p />
-            <div hidden={this.state.character}>
+            <div hidden={this.state.character || !this.props.location.state}>
               <Button onClick={() => this.fetchCharacter(this.props.location.state.id)}>Rick Up Your Character...Client-Side</Button>
             </div>
           </div>
@@ -74,7 +70,6 @@ class DetailsPage extends Component {
     axios
       .get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(character => {
-        console.log('\n\ngot a character! ', character)
         const {
           data
         } = character

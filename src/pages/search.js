@@ -29,6 +29,9 @@ export const GatsbyQuery = graphql`
 `
 
 class SearchPage extends Component {
+  componentDidUpdate() {
+    console.log('\n\n\nCDU()');
+  }
   render() {
     const {
       rickAndMortyAPI: { characters },

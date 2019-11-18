@@ -53,8 +53,6 @@ class IndexPage extends Component {
           <h2>
             <Link to="/search/">Rick yourself over to the Search Page!</Link>
           </h2>
-          {/* <h2>Image of Rick's pupper</h2>
-          <p>This will come from a request on the client</p> */}
         </div>
       </Layout>
     )

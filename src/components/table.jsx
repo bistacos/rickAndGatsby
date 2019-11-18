@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
-import { defaultCharacters } from '../constants/defaultCharacters';
 import { Link } from "gatsby"
 
 class DataTable extends Component {
+  state = {
+    id: 1
+  }
+
   constructor(props) {
     super(props);
     this.transformData = this.transformData.bind(this); 
@@ -13,7 +16,7 @@ class DataTable extends Component {
     let arr = data.results;
     for (let i = 0, l = arr.length; i < l; i++) {
       if (!arr[i].type) arr[i].type = ' ';
-      arr[i].details = <Link to="/details" data={{ id: arr[i].id}}>Get Details</Link>
+      arr[i].details = <Link to="/details" state={{ id: arr[i].id}}>Get Details</Link>
     }
     data.results = arr;
     return data;

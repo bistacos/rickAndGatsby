@@ -41,13 +41,16 @@ class SearchPage extends Component {
         {
           characters ? (
             <p>
-              Looks like our CMS API returned successfully! Here are some characters we got back from it:&nbsp;
+              Looks like our CMS API returned successfully! Otherwise, you'd be seeing different content.
+              <br />
+              <br />
+              To prove it, here are some characters we got back:&nbsp;
               {characters.results.slice(0,20).map(char => (
                 <span>{char.name}, </span>
               ), 20)} ...and more!
             </p>
           ) : (
-            <h3>If you're seeing this, it's becauxse the API didn't return anything.</h3>
+            <h3>If you're seeing this, it's because the API didn't return anything.</h3>
           )
         }
         <DataTable

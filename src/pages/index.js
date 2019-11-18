@@ -8,7 +8,7 @@ import NavBar from "../components/navbar"
 export const GatsbyQuery = graphql`
   {
     rickAndMortyAPI {
-      character(id: 1) {
+      character(id: 34) {
         name
         image
         status
@@ -27,7 +27,7 @@ class IndexPage extends Component {
       <Layout>
         <NavBar />
         <div style={{ textAlign: "center", width: "600px", margin: "50px auto" }}>
-          <h1>{character.name}, Materialized from an API</h1>
+          <h1>Behold! {character.name}, materialized from an API</h1>
           <p>Rick & Morty API data loads at build time. Like our Contentful data, except full of whatever the cool kids are into.</p>
           <div>
             <img

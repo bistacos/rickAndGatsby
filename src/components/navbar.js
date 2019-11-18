@@ -25,7 +25,7 @@ const NavBar = (props, location) => {
                     <NavLink href="/search/">Search</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="https://github.com/bistacos/pokedex">GitHub</NavLink>
+                    <NavLink href="https://github.com/bistacos/rickAndGatsby">GitHub</NavLink>
                   </NavItem>
                 </Nav>
             </Navbar>
